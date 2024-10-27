@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            panelContenedor = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelDerecho = new Panel();
+            txtClave = new Resources.Components.TextBoxs.TextBoxRounded();
+            txtCorreo = new Resources.Components.TextBoxs.TextBoxRounded();
             btnAcceder = new Resources.Components.Buttons.BotonEsquinaRedonda();
-            txtClave = new TextBox();
-            txtCorreo = new TextBox();
             lblClave = new Label();
             lblCorreo = new Label();
             pcbLogo = new PictureBox();
             panelIzquierdo = new Panel();
             pcbImgIzquierda = new PictureBox();
-            panel1.SuspendLayout();
+            panelContenedor.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panelDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
@@ -47,16 +47,16 @@
             ((System.ComponentModel.ISupportInitialize)pcbImgIzquierda).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelContenedor
             // 
-            panel1.AutoScroll = true;
-            panel1.BackColor = Color.FromArgb(24, 139, 255);
-            panel1.Controls.Add(tableLayoutPanel1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1182, 753);
-            panel1.TabIndex = 0;
+            panelContenedor.AutoScroll = true;
+            panelContenedor.BackColor = Color.FromArgb(27, 154, 233);
+            panelContenedor.Controls.Add(tableLayoutPanel1);
+            panelContenedor.Dock = DockStyle.Fill;
+            panelContenedor.Location = new Point(0, 0);
+            panelContenedor.Name = "panelContenedor";
+            panelContenedor.Size = new Size(1182, 753);
+            panelContenedor.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -75,9 +75,10 @@
             // 
             // panelDerecho
             // 
-            panelDerecho.Controls.Add(btnAcceder);
+            panelDerecho.BackColor = Color.FromArgb(27, 154, 233);
             panelDerecho.Controls.Add(txtClave);
             panelDerecho.Controls.Add(txtCorreo);
+            panelDerecho.Controls.Add(btnAcceder);
             panelDerecho.Controls.Add(lblClave);
             panelDerecho.Controls.Add(lblCorreo);
             panelDerecho.Controls.Add(pcbLogo);
@@ -87,9 +88,57 @@
             panelDerecho.Size = new Size(585, 747);
             panelDerecho.TabIndex = 0;
             // 
+            // txtClave
+            // 
+            txtClave.Anchor = AnchorStyles.None;
+            txtClave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            txtClave.BackColor = SystemColors.Window;
+            txtClave.BorderColor = Color.DarkBlue;
+            txtClave.BorderFocusColor = Color.Blue;
+            txtClave.BorderRadius = 20;
+            txtClave.BorderSize = 2;
+            txtClave.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtClave.ForeColor = Color.FromArgb(64, 64, 64);
+            txtClave.Location = new Point(109, 452);
+            txtClave.Margin = new Padding(4);
+            txtClave.Multiline = false;
+            txtClave.Name = "txtClave";
+            txtClave.Padding = new Padding(10, 7, 10, 7);
+            txtClave.PasswordChar = false;
+            txtClave.PlaceholderColor = Color.DarkGray;
+            txtClave.PlaceholderText = "";
+            txtClave.Size = new Size(352, 35);
+            txtClave.TabIndex = 9;
+            txtClave.Texts = "";
+            txtClave.UnderlinedStyle = false;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Anchor = AnchorStyles.None;
+            txtCorreo.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            txtCorreo.BackColor = SystemColors.Window;
+            txtCorreo.BorderColor = Color.DarkBlue;
+            txtCorreo.BorderFocusColor = Color.Blue;
+            txtCorreo.BorderRadius = 20;
+            txtCorreo.BorderSize = 2;
+            txtCorreo.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCorreo.ForeColor = Color.FromArgb(64, 64, 64);
+            txtCorreo.Location = new Point(109, 372);
+            txtCorreo.Margin = new Padding(4);
+            txtCorreo.Multiline = false;
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Padding = new Padding(10, 7, 10, 7);
+            txtCorreo.PasswordChar = false;
+            txtCorreo.PlaceholderColor = Color.DarkGray;
+            txtCorreo.PlaceholderText = "";
+            txtCorreo.Size = new Size(352, 35);
+            txtCorreo.TabIndex = 8;
+            txtCorreo.Texts = "";
+            txtCorreo.UnderlinedStyle = false;
+            // 
             // btnAcceder
             // 
-            btnAcceder.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnAcceder.Anchor = AnchorStyles.None;
             btnAcceder.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnAcceder.BackColor = Color.FromArgb(0, 0, 192);
             btnAcceder.BackgroundColor = Color.FromArgb(0, 0, 192);
@@ -100,42 +149,20 @@
             btnAcceder.FlatStyle = FlatStyle.Flat;
             btnAcceder.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.White;
-            btnAcceder.Location = new Point(164, 516);
+            btnAcceder.Location = new Point(141, 516);
             btnAcceder.Name = "btnAcceder";
-            btnAcceder.Size = new Size(265, 50);
+            btnAcceder.Size = new Size(300, 59);
             btnAcceder.TabIndex = 7;
             btnAcceder.Text = "Acceder";
             btnAcceder.TextColor = Color.White;
             btnAcceder.UseVisualStyleBackColor = false;
             // 
-            // txtClave
-            // 
-            txtClave.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtClave.BackColor = Color.White;
-            txtClave.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtClave.ForeColor = Color.Black;
-            txtClave.Location = new Point(164, 451);
-            txtClave.Name = "txtClave";
-            txtClave.Size = new Size(265, 30);
-            txtClave.TabIndex = 5;
-            // 
-            // txtCorreo
-            // 
-            txtCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtCorreo.BackColor = Color.White;
-            txtCorreo.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCorreo.ForeColor = Color.Black;
-            txtCorreo.Location = new Point(164, 371);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(265, 30);
-            txtCorreo.TabIndex = 4;
-            // 
             // lblClave
             // 
-            lblClave.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblClave.Anchor = AnchorStyles.None;
             lblClave.AutoSize = true;
             lblClave.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblClave.Location = new Point(164, 422);
+            lblClave.Location = new Point(109, 422);
             lblClave.Name = "lblClave";
             lblClave.Size = new Size(65, 26);
             lblClave.TabIndex = 3;
@@ -144,10 +171,10 @@
             // 
             // lblCorreo
             // 
-            lblCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblCorreo.Anchor = AnchorStyles.None;
             lblCorreo.AutoSize = true;
             lblCorreo.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCorreo.Location = new Point(164, 342);
+            lblCorreo.Location = new Point(109, 342);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(77, 26);
             lblCorreo.TabIndex = 2;
@@ -156,7 +183,7 @@
             // 
             // pcbLogo
             // 
-            pcbLogo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pcbLogo.Anchor = AnchorStyles.None;
             pcbLogo.Image = Properties.Resources.logo;
             pcbLogo.Location = new Point(202, 110);
             pcbLogo.Name = "pcbLogo";
@@ -178,11 +205,11 @@
             // pcbImgIzquierda
             // 
             pcbImgIzquierda.Dock = DockStyle.Fill;
-            pcbImgIzquierda.Image = Properties.Resources.recursos;
+            pcbImgIzquierda.Image = Properties.Resources.recursos4;
             pcbImgIzquierda.Location = new Point(0, 0);
             pcbImgIzquierda.Name = "pcbImgIzquierda";
             pcbImgIzquierda.Size = new Size(585, 747);
-            pcbImgIzquierda.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbImgIzquierda.SizeMode = PictureBoxSizeMode.CenterImage;
             pcbImgIzquierda.TabIndex = 0;
             pcbImgIzquierda.TabStop = false;
             // 
@@ -191,10 +218,10 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 753);
-            Controls.Add(panel1);
+            Controls.Add(panelContenedor);
             Name = "Login";
             Text = "Login";
-            panel1.ResumeLayout(false);
+            panelContenedor.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panelDerecho.ResumeLayout(false);
             panelDerecho.PerformLayout();
@@ -206,16 +233,16 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelContenedor;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panelDerecho;
         private Label lblCorreo;
         private PictureBox pcbLogo;
         private Panel panelIzquierdo;
-        private TextBox txtClave;
-        private TextBox txtCorreo;
         private Label lblClave;
         private PictureBox pcbImgIzquierda;
         private Humania_RH_Force.Resources.Components.Buttons.BotonEsquinaRedonda btnAcceder;
+        private Resources.Components.TextBoxs.TextBoxRounded txtCorreo;
+        private Resources.Components.TextBoxs.TextBoxRounded txtClave;
     }
 }
