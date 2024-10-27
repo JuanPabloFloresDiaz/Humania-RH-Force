@@ -1,6 +1,8 @@
 using System;
 using System.Windows.Forms;
 using Humania_RH_Force.Views;
+using Humania_RH_Force.Presenters;
+
 namespace Humania_RH_Force
 {
     internal static class Program
@@ -11,10 +13,13 @@ namespace Humania_RH_Force
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            var loginView = new Login();
+            var loginPresenter = new LoginPresenter(loginView);  // Enlaza la vista con el presentador
+
+            Application.Run(loginView);
         }
     }
 }

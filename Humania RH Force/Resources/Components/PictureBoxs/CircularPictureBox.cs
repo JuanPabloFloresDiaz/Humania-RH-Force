@@ -3,7 +3,7 @@ using System.Drawing.Drawing2D;
 
 namespace Humania_RH_Force.Resources.Components.PictureBoxs
 {
-    class CircularPictureBox : PictureBox
+    public class CircularPictureBox : PictureBox
     {
         //Fields
         private int borderSize = 2;

@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.ComponentModel;
 
 namespace Humania_RH_Force.Resources.Components.Buttons
 {
-    class RadioButtonPersonalizado : RadioButton
+    public class RadioButtonPersonalizado : RadioButton
     {
         //Fields
         private Color checkedColor = Color.MediumSlateBlue;

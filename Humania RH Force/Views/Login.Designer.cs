@@ -31,18 +31,19 @@
             panelContenedor = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelDerecho = new Panel();
+            cpcbLogo = new Resources.Components.PictureBoxs.CircularPictureBox();
             txtClave = new Resources.Components.TextBoxs.TextBoxRounded();
             txtCorreo = new Resources.Components.TextBoxs.TextBoxRounded();
             btnAcceder = new Resources.Components.Buttons.BotonEsquinaRedonda();
             lblClave = new Label();
             lblCorreo = new Label();
-            pcbLogo = new PictureBox();
             panelIzquierdo = new Panel();
             pcbImgIzquierda = new PictureBox();
+            btnAyuda = new Resources.Components.Buttons.ButtonPersonalizado();
             panelContenedor.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panelDerecho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cpcbLogo).BeginInit();
             panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbImgIzquierda).BeginInit();
             SuspendLayout();
@@ -76,17 +77,35 @@
             // panelDerecho
             // 
             panelDerecho.BackColor = Color.FromArgb(27, 154, 233);
+            panelDerecho.Controls.Add(btnAyuda);
+            panelDerecho.Controls.Add(cpcbLogo);
             panelDerecho.Controls.Add(txtClave);
             panelDerecho.Controls.Add(txtCorreo);
             panelDerecho.Controls.Add(btnAcceder);
             panelDerecho.Controls.Add(lblClave);
             panelDerecho.Controls.Add(lblCorreo);
-            panelDerecho.Controls.Add(pcbLogo);
             panelDerecho.Dock = DockStyle.Fill;
             panelDerecho.Location = new Point(594, 3);
             panelDerecho.Name = "panelDerecho";
             panelDerecho.Size = new Size(585, 747);
             panelDerecho.TabIndex = 0;
+            // 
+            // cpcbLogo
+            // 
+            cpcbLogo.Anchor = AnchorStyles.None;
+            cpcbLogo.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            cpcbLogo.BorderColor = Color.LightBlue;
+            cpcbLogo.BorderColor2 = Color.SkyBlue;
+            cpcbLogo.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            cpcbLogo.BorderSize = 2;
+            cpcbLogo.GradientAngle = 50F;
+            cpcbLogo.Image = Properties.Resources.logo;
+            cpcbLogo.Location = new Point(185, 110);
+            cpcbLogo.Name = "cpcbLogo";
+            cpcbLogo.Size = new Size(200, 200);
+            cpcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            cpcbLogo.TabIndex = 10;
+            cpcbLogo.TabStop = false;
             // 
             // txtClave
             // 
@@ -181,17 +200,6 @@
             lblCorreo.Text = "Correo";
             lblCorreo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pcbLogo
-            // 
-            pcbLogo.Anchor = AnchorStyles.None;
-            pcbLogo.Image = Properties.Resources.logo;
-            pcbLogo.Location = new Point(202, 110);
-            pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(200, 200);
-            pcbLogo.SizeMode = PictureBoxSizeMode.CenterImage;
-            pcbLogo.TabIndex = 1;
-            pcbLogo.TabStop = false;
-            // 
             // panelIzquierdo
             // 
             panelIzquierdo.BackColor = Color.FromArgb(0, 0, 192);
@@ -213,6 +221,25 @@
             pcbImgIzquierda.TabIndex = 0;
             pcbImgIzquierda.TabStop = false;
             // 
+            // btnAyuda
+            // 
+            btnAyuda.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnAyuda.BackColor = Color.FromArgb(27, 154, 233);
+            btnAyuda.BackgroundColor = Color.FromArgb(27, 154, 233);
+            btnAyuda.BorderColor = Color.LightSkyBlue;
+            btnAyuda.BorderRadius = 0;
+            btnAyuda.BorderSize = 0;
+            btnAyuda.FlatAppearance.BorderSize = 0;
+            btnAyuda.FlatStyle = FlatStyle.Flat;
+            btnAyuda.ForeColor = Color.White;
+            btnAyuda.Image = Properties.Resources.information;
+            btnAyuda.Location = new Point(519, 688);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(57, 50);
+            btnAyuda.TabIndex = 11;
+            btnAyuda.TextColor = Color.White;
+            btnAyuda.UseVisualStyleBackColor = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -225,7 +252,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             panelDerecho.ResumeLayout(false);
             panelDerecho.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cpcbLogo).EndInit();
             panelIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pcbImgIzquierda).EndInit();
             ResumeLayout(false);
@@ -237,12 +264,13 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panelDerecho;
         private Label lblCorreo;
-        private PictureBox pcbLogo;
         private Panel panelIzquierdo;
         private Label lblClave;
         private PictureBox pcbImgIzquierda;
         private Humania_RH_Force.Resources.Components.Buttons.BotonEsquinaRedonda btnAcceder;
         private Resources.Components.TextBoxs.TextBoxRounded txtCorreo;
         private Resources.Components.TextBoxs.TextBoxRounded txtClave;
+        private Resources.Components.PictureBoxs.CircularPictureBox cpcbLogo;
+        private Resources.Components.Buttons.ButtonPersonalizado btnAyuda;
     }
 }
