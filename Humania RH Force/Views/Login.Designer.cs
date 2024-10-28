@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panelContenedor = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelDerecho = new Panel();
+            btnAyuda = new Resources.Components.Buttons.ButtonPersonalizado();
             cpcbLogo = new Resources.Components.PictureBoxs.CircularPictureBox();
             txtClave = new Resources.Components.TextBoxs.TextBoxRounded();
             txtCorreo = new Resources.Components.TextBoxs.TextBoxRounded();
@@ -39,13 +41,14 @@
             lblCorreo = new Label();
             panelIzquierdo = new Panel();
             pcbImgIzquierda = new PictureBox();
-            btnAyuda = new Resources.Components.Buttons.ButtonPersonalizado();
+            errorLogin = new ErrorProvider(components);
             panelContenedor.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panelDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cpcbLogo).BeginInit();
             panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbImgIzquierda).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorLogin).BeginInit();
             SuspendLayout();
             // 
             // panelContenedor
@@ -90,6 +93,25 @@
             panelDerecho.Size = new Size(585, 747);
             panelDerecho.TabIndex = 0;
             // 
+            // btnAyuda
+            // 
+            btnAyuda.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnAyuda.BackColor = Color.FromArgb(27, 154, 233);
+            btnAyuda.BackgroundColor = Color.FromArgb(27, 154, 233);
+            btnAyuda.BorderColor = Color.LightSkyBlue;
+            btnAyuda.BorderRadius = 0;
+            btnAyuda.BorderSize = 0;
+            btnAyuda.FlatAppearance.BorderSize = 0;
+            btnAyuda.FlatStyle = FlatStyle.Flat;
+            btnAyuda.ForeColor = Color.White;
+            btnAyuda.Image = Properties.Resources.information;
+            btnAyuda.Location = new Point(519, 688);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(57, 50);
+            btnAyuda.TabIndex = 11;
+            btnAyuda.TextColor = Color.White;
+            btnAyuda.UseVisualStyleBackColor = false;
+            // 
             // cpcbLogo
             // 
             cpcbLogo.Anchor = AnchorStyles.None;
@@ -123,7 +145,7 @@
             txtClave.Multiline = false;
             txtClave.Name = "txtClave";
             txtClave.Padding = new Padding(10, 7, 10, 7);
-            txtClave.PasswordChar = false;
+            txtClave.PasswordChar = true;
             txtClave.PlaceholderColor = Color.DarkGray;
             txtClave.PlaceholderText = "";
             txtClave.Size = new Size(352, 35);
@@ -221,24 +243,9 @@
             pcbImgIzquierda.TabIndex = 0;
             pcbImgIzquierda.TabStop = false;
             // 
-            // btnAyuda
+            // errorLogin
             // 
-            btnAyuda.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnAyuda.BackColor = Color.FromArgb(27, 154, 233);
-            btnAyuda.BackgroundColor = Color.FromArgb(27, 154, 233);
-            btnAyuda.BorderColor = Color.LightSkyBlue;
-            btnAyuda.BorderRadius = 0;
-            btnAyuda.BorderSize = 0;
-            btnAyuda.FlatAppearance.BorderSize = 0;
-            btnAyuda.FlatStyle = FlatStyle.Flat;
-            btnAyuda.ForeColor = Color.White;
-            btnAyuda.Image = Properties.Resources.information;
-            btnAyuda.Location = new Point(519, 688);
-            btnAyuda.Name = "btnAyuda";
-            btnAyuda.Size = new Size(57, 50);
-            btnAyuda.TabIndex = 11;
-            btnAyuda.TextColor = Color.White;
-            btnAyuda.UseVisualStyleBackColor = false;
+            errorLogin.ContainerControl = this;
             // 
             // Login
             // 
@@ -255,6 +262,7 @@
             ((System.ComponentModel.ISupportInitialize)cpcbLogo).EndInit();
             panelIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pcbImgIzquierda).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorLogin).EndInit();
             ResumeLayout(false);
         }
 
@@ -272,5 +280,6 @@
         private Resources.Components.TextBoxs.TextBoxRounded txtClave;
         private Resources.Components.PictureBoxs.CircularPictureBox cpcbLogo;
         private Resources.Components.Buttons.ButtonPersonalizado btnAyuda;
+        private ErrorProvider errorLogin;
     }
 }
