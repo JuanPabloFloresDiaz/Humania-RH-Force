@@ -18,5 +18,9 @@ namespace Humania_RH_Force.Views
         // Propiedades para acceso a los controles específicos
         TextBoxRounded CorreoControl { get; }
         TextBoxRounded ClaveControl { get; }
+
+
+        // Nueva función para redirección
+        void RedirigirDashboard();
     }
 }

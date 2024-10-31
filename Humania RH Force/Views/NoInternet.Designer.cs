@@ -1,6 +1,6 @@
 ﻿namespace Humania_RH_Force.Views
 {
-    partial class FirstUser
+    partial class NoInternet
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FirstUser";
+            this.Text = "NoInternet";
         }
 
         #endregion

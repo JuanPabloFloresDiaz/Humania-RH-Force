@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             panelContenedor = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelDerecho = new Panel();
@@ -234,6 +235,7 @@
             // 
             // pcbImgIzquierda
             // 
+            pcbImgIzquierda.BackColor = Color.White;
             pcbImgIzquierda.Dock = DockStyle.Fill;
             pcbImgIzquierda.Image = Properties.Resources.recursos4;
             pcbImgIzquierda.Location = new Point(0, 0);
@@ -253,8 +255,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 753);
             Controls.Add(panelContenedor);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
-            Text = "Login";
+            Text = "Inicio de sesión";
             panelContenedor.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panelDerecho.ResumeLayout(false);

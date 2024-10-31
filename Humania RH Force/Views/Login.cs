@@ -21,9 +21,20 @@ namespace Humania_RH_Force.Views
         public Login()
         {
             InitializeComponent();
+            // Centrar el formulario en la pantalla
+            this.StartPosition = FormStartPosition.CenterScreen;
             btnAyuda.Click += (s, e) => ProbarConexion?.Invoke(this, EventArgs.Empty);  // Enlaza el botón con el evento
             btnAcceder.Click += (s, e) => IniciarSesion?.Invoke(this, EventArgs.Empty);  // Enlaza btnAcceder con IniciarSesion
         }
+
+        // Implementación de otros métodos
+
+        public void RedirigirDashboard()
+        {
+            
+            //AppContext.NavigateToDashboard();
+        }
+
         // Se definen los controles que se ocuparan
         public TextBoxRounded CorreoControl => txtCorreo;
         public TextBoxRounded ClaveControl => txtClave;

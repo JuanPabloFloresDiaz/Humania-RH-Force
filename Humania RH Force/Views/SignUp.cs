@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace Humania_RH_Force.Views
 {
-    public partial class FirstUser : Form
+    public partial class SignUp : Form
     {
-        public FirstUser()
+        public SignUp()
         {
             InitializeComponent();
+            // Centrar el formulario en la pantalla
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
     }
 }

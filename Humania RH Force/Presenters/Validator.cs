@@ -53,11 +53,6 @@ public class Validator
                 fileError = $"La dimensión de la imagen es menor a {dimension}px";
                 return false;
             }
-            else if (image.Width != image.Height)
-            {
-                fileError = "La imagen no es cuadrada";
-                return false;
-            }
             else if (Path.GetExtension(filePath).ToLower() == ".jpg" || Path.GetExtension(filePath).ToLower() == ".png")
             {
                 filename = Guid.NewGuid().ToString() + Path.GetExtension(filePath).ToLower();
